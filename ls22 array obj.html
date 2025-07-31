@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5" id="showdata">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let card = [
+        {
+            id: 1,
+            img: "https://i.pinimg.com/originals/50/93/37/5093379276ed7c2857a9c2176aba957f.gif",
+            price: 5,
+            text: "Please help buy me,Cheap Cheap",
+            link: ""
+        },
+        {
+            id: 2,
+            img: "https://i.pinimg.com/originals/75/b7/ee/75b7ee56e043ad3a4c7f569959b4ae92.gif",
+            price: 15,
+            text: "Please help buy me,Cheap Cheap",
+            link: ""
+        },
+        {
+            id: 3,
+            img: "https://i.pinimg.com/originals/dc/f3/7a/dcf37a91bd27c05db5cfa4906176513d.gif",
+            price: 25,
+            text: "Please help buy me,Cheap Cheap",
+            link: ""
+        },
+        {
+            id: 4,
+            img: 'https://i.pinimg.com/originals/88/93/df/8893dffe4a3258c4f5998bdae9b03d8c.gif',
+            price: 35,
+            text: "Please help buy me,Cheap Cheap",
+            link: ""
+        }
+    ]
+    let result = "";
+    card.forEach(obj => {
+        result += `
+        <div class="col-12 col-sm-4 col-md-4 col-lg-3 mt-2">
+            <img src="${obj.img}" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${obj.price}$</h5>
+                <p class="card-text">${obj.text}.</p>
+                <a href="${obj.link}" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+        `;
+    })
+    document.getElementById("showdata").innerHTML = result;
+</script>
+
+</html>
